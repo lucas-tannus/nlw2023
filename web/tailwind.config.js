@@ -73,6 +73,16 @@ module.exports = {
           900: '#025929',
         },
       },
+      blur: {
+        full: '184px',
+      },
+      backgroundImage: {
+        stripes:
+          'linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.1) 12.5%, transparent 12.5%, transparent)',
+      },
+      backgroundSize: {
+        stripes: '100% 8px',
+      },
     },
   },
   plugins: [],
