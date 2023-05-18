@@ -10,7 +10,7 @@ import './globals.css'
 const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
 const baiJamjuree = BaiJamjuree({
   subsets: ['latin'],
-  weight: '700',
+  weight: ['700'],
   variable: '--font-bai-jamjuree',
 })
 
