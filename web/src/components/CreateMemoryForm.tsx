@@ -12,7 +12,6 @@ export default function CreateMemoryForm() {
 
   function handleChangeMedia(event: ChangeEvent<HTMLInputElement>) {
     const files = event.target.files
-    console.log({ files })
 
     if (!files || files.length === 0) {
       setPreview(null)
