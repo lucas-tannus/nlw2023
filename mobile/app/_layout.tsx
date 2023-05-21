@@ -21,8 +21,9 @@ export default function Layout() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null)
 
   useEffect(() => {
-    const token = SecureStore.getItemAsync('token')
-    setIsAuthenticated(!!token)
+    SecureStore.getItemAsync('token').then((token) => {
+      setIsAuthenticated(!!token)
+    })
   }, [])
 
   const [hasLoadedFonts] = useFonts({
@@ -49,11 +50,12 @@ export default function Layout() {
           contentStyle: {
             backgroundColor: 'transparent',
           },
+          animation: 'fade',
         }}
       >
         <Stack.Screen name="index" redirect={isAuthenticated} />
-        <Stack.Screen name="new" />
         <Stack.Screen name="memories" />
+        <Stack.Screen name="new" />
       </Stack>
     </ImageBackground>
   )
