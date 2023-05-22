@@ -22,7 +22,13 @@ O repositório está dividido em 3 pastas, uma para cada serviço:
 
 Caso não tenha o Node instalado ainda de uma olhada na [documentação](https://nodejs.org/en/download).
 
-Para executar a aplicação mobile é necessário ter um dispositivo conectado. Para isso, pode ser utilizado o seu dispositivo físico, um similador Android ou IOS.
+> Para executar a aplicação mobile é necessário ter um dispositivo conectado. Para isso, pode ser utilizado o seu dispositivo físico, um similador Android ou IOS.
+
+A aplicação é autenticada usando o OAuth. Siga os seguintes passos:
+
+1. A aplicação é autenticada usando o login do Github então, para configurar a autenticação deve ser criada uma aplicação no [OAuth Apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app) do Github. Obs: A aplicação web e mobile devem possuir OAuth Apps diferentes.
+2. Adicione o client id (**GITHUB_CLIENT_ID**) e o client secret (**GITHUB_CLIENT_SECRET**) nas variáveis de ambiente do servidor.
+3. Adiciona o client id (**NEXT_PUBLIC_GITHUB_CLIENT_ID**) nas variáveis de ambiente da aplicação web.
 
 ### 🔧 Instalação
 
